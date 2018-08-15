@@ -52,7 +52,7 @@ class lineageOsDevices
         $aMatches = $this->filterResponseAllDevices($sResponse);
 
         if (empty($aMatches)) {
-            return [];
+            return $aMatches;
         }
 
         return $this->addAndStructureDeviceInformation($aMatches);
