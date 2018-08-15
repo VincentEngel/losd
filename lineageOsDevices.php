@@ -47,7 +47,7 @@ class lineageOsDevices
     /**
      * @return array
      */
-    public function &getDevices() : array {
+    public function getDevices() : array {
         $sResponse = $this->getCurlResponse('https://wiki.lineageos.org/sitemap.xml');
         $aMatches = $this->filterResponseAllDevices($sResponse);
 
@@ -63,7 +63,7 @@ class lineageOsDevices
      *
      * @return array
      */
-    private function &addAndStructureDeviceInformation(array &$aDevices) : array {
+    private function addAndStructureDeviceInformation(array &$aDevices) : array {
 
         if ($this->bShowProgress) echo "Loading device information\n";
 
@@ -103,7 +103,7 @@ class lineageOsDevices
 
         if ($this->bShowProgress) echo "\nFinished";
 
-        return $aDevices;
+        return array_values($aDevices);
     }
 
     /**
