@@ -7,7 +7,7 @@ To get all devices running the 15.1 version:
 (new lineageOsDevices('15.1'))->getDevices();
 ```
 
-Output looks like this:
+Output (json_encode) looks like this:
 ```
 [
     {
